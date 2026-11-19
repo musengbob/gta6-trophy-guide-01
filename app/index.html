@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leonida Night — GTA 6 Trophy Guide &amp; Tracker</title>
-<meta name="description" content="Offline guide and tracker for all 55 GTA 6 PlayStation trophies: cited guides, platinum roadmap, missable watch, saved progress.">
+<meta name="description" content="Offline guide and tracker for all 55 GTA 6 PlayStation trophies: 174 numbered cited steps, 7-stage platinum roadmap, missable watch, source rail, backup pane.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,6 +42,34 @@
 
 <section class="stage-strip" id="stage-strip" aria-label="Stage tracker"></section>
 
+<aside class="source-rail" id="source-rail" aria-label="Sources cited">
+  <h2>SOURCES — every guide cites its sources by name</h2>
+  <p class="rail-intro">7 guides read 20 Nov 2026. Counts are computed from the data: a source counts as covering a trophy when that trophy's name appears on the source's page.</p>
+  <ul class="rail-list">
+    <li class="rail-item" data-source="powerpyx"><span class="rail-name">PowerPyx</span><span class="rail-count" data-coverage="55">cited by 55 of 55</span><span class="rail-note">Full 55-trophy guide and roadmap; asserts methods for 3 of the 5 mystery triggers.</span></li>
+    <li class="rail-item" data-source="gtabase"><span class="rail-name">GTABase</span><span class="rail-count" data-coverage="55">cited by 55 of 55</span><span class="rail-note">Full list with grades and hidden flags; marks 5 requirements unconfirmed.</span></li>
+    <li class="rail-item" data-source="outputlag"><span class="rail-name">OutputLag</span><span class="rail-count" data-coverage="55">cited by 55 of 55</span><span class="rail-note">Full list, 27 visible plus 28 hidden; stresses manual saves — no mission replay.</span></li>
+    <li class="rail-item" data-source="sixshore"><span class="rail-name">SixShore</span><span class="rail-count" data-coverage="43">cited by 43 of 55</span><span class="rail-note">Names 43 of 55; the 12 story trophies are covered by count and chapter only, under a spoiler policy.</span></li>
+    <li class="rail-item" data-source="gtazone"><span class="rail-name">GTA Zone</span><span class="rail-count" data-coverage="55">cited by 55 of 55</span><span class="rail-note">Full list with Gamerscore; names the 5 unconfirmed entries and the 18 meditation spots.</span></li>
+    <li class="rail-item" data-source="fullsweep"><span class="rail-name">FullSweep</span><span class="rail-count" data-coverage="55">cited by 55 of 55</span><span class="rail-note">Full list in its own words; flags the garage-count clash (trophy text 8, database 12).</span></li>
+    <li class="rail-item" data-source="planetgta6"><span class="rail-name">PlanetGTA6</span><span class="rail-count" data-coverage="55">cited by 55 of 55</span><span class="rail-note">Full list with official names and descriptions from PSN trackers; declines to call any trophy missable yet.</span></li>
+  </ul>
+  <p class="rail-agreement" id="rail-agreement">Agreement: 49 of 55 triggers confirmed by 4+ sources; 6 unconfirmed; 4 disputed (PowerPyx asserts, others do not).</p>
+</aside>
+
+<section class="backup-pane" id="backup-pane" aria-label="Progress backup">
+  <h2>BACKUP — your progress lives in this browser only</h2>
+  <p class="backup-intro">Progress is saved in localStorage under key <code id="storage-key">leonida-night-earned-v1</code> — <span id="storage-bytes">0 bytes</span> stored. Export a backup file before clearing browser data; import it back on any device running this guide.</p>
+  <div class="backup-actions">
+    <button id="export-btn" type="button" data-action="export">Export progress</button>
+    <button id="import-btn" type="button" data-action="import">Import progress</button>
+    <button id="copy-link-btn" type="button" data-action="copy-link">Copy share link</button>
+    <button id="reset-btn" type="button" data-action="reset">Reset progress</button>
+    <input id="import-file" type="file" accept="application/json,.json" hidden>
+    <span id="tool-msg" role="status"></span>
+  </div>
+</section>
+
 <main>
   <section id="view-tracker" class="view">
     <div class="toolbar">
@@ -53,25 +81,78 @@
         <button class="filter-btn" data-filter="activities" type="button">Activities</button>
         <button class="filter-btn" data-filter="online" type="button">Online</button>
       </div>
+      <label class="confirm-filter">Confirmation:
+        <select id="confirm-filter" data-filter-type="confirm_status" aria-label="Filter by confirmation status">
+          <option value="all" selected>All — 55 trophies</option>
+          <option value="confirmed">Confirmed only — 49</option>
+          <option value="unconfirmed">Unconfirmed only — 6</option>
+        </select>
+      </label>
       <input id="search" type="search" placeholder="Search name, mission or place…" aria-label="Search trophies">
       <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> Spoiler-safe: hide hidden trophies until earned</label>
     </div>
-    <div class="toolbar tools">
-      <button id="export-btn" type="button">Export progress</button>
-      <button id="import-btn" type="button">Import progress</button>
-      <button id="copy-link-btn" type="button">Copy share link</button>
-      <button id="reset-btn" type="button">Reset progress</button>
-      <input id="import-file" type="file" accept="application/json,.json" hidden>
-      <span id="tool-msg" role="status"></span>
-    </div>
     <p class="result-count" id="result-count"></p>
     <div class="cards" id="cards"></div>
+    <template id="trophy-card-template">
+      <article class="trophy-card" data-trophy-id="" data-grade="" data-kind="" data-confirm-status="" data-missable="" data-stage="">
+        <header class="card-head">
+          <label class="earned-toggle"><input type="checkbox" data-action="toggle-earned" aria-label="Mark earned"><span class="earned-mark" aria-hidden="true"></span></label>
+          <h3 class="card-name" data-field="name"></h3>
+          <span class="card-grade" data-field="grade"></span>
+          <span class="card-confirm" data-field="confirm_status"></span>
+        </header>
+        <p class="card-desc" data-field="description"></p>
+        <p class="card-where" data-field="where"></p>
+        <div class="card-guide">
+          <h4 class="guide-title">How to unlock</h4>
+          <p class="card-guide-text" data-field="guide"></p>
+          <ol class="steps" data-field="steps" aria-label="Numbered steps"></ol>
+        </div>
+        <p class="card-citation" data-field="citation"><span class="citation-label">Sources:</span> <span data-field="sources"></span></p>
+      </article>
+    </template>
   </section>
 
   <section id="view-roadmap" class="view" hidden>
-    <h2>Platinum Roadmap — all 55 trophies, in earning order</h2>
-    <p class="view-intro">Six stages, in the order to earn them. The story runs about 60 hours; the platinum takes about 200. Cheats disable trophies, so keep them off until the platinum pops. Every row shows the trophy's grade, its chapter, mission or activity, its count where PlayStation tracks one, and its missable flag.</p>
-    <div id="roadmap"></div>
+    <h2>Platinum Roadmap — all 55 trophies in 7 stages</h2>
+    <p class="view-intro" id="roadmap-summary">Difficulty 4/10 · about 200 hours · 1 playthrough · 1 missable · 6 unconfirmed. The story runs about 60 hours; the platinum takes about 200. Cheats disable trophies, so keep them off until the platinum pops. Every stage shows its difficulty, hours, guidance and trophy count; per-stage earned counters fill in as you check trophies off.</p>
+    <div id="roadmap">
+      <article class="roadmap-stage" data-stage-id="1" data-focus="story" data-trophy-ids="2,3,4,5,6,7,8,9,10,11,12,13">
+        <header class="stage-head"><h3><span class="stage-num">Stage 1</span> The story, start to finish</h3><span class="stage-meta"><span class="stage-difficulty" data-field="difficulty">Difficulty 3/10</span> · <span class="stage-hours" data-field="hours">60 hours</span> · <span class="stage-count" data-field="count">12 trophies</span> · <span class="stage-earned" data-field="earned">0 / 12 earned</span></span></header>
+        <p class="stage-guidance" data-field="guidance">Play the main missions in order from the opening mission Gone Fishing through the final mission. The 12 story trophies unlock as the story reaches them: 2 chapter trophies in Chapter 1, 3 more across Chapters 2 to 4, the gold finale trophy, and 6 mission trophies (Breakfast Run, The Cartel Heist, Child's Play, Headliners, VCIA Takedown, Operation Savage Glory). There is no mission replay, so keep a manual save before every big mission. Two things to do during the story, not after it: meditate at the Chapter 1 balcony spot before the chapter ends (the one confirmed missable trophy, Positive Mental Attitude) and keep cheats off — they disable trophies.</p>
+        <ol class="stage-trophies" data-field="trophies" aria-label="Trophies in this stage"></ol>
+      </article>
+      <article class="roadmap-stage" data-stage-id="2" data-focus="exploration/collectibles" data-trophy-ids="28,30,31,35,42,54,55">
+        <header class="stage-head"><h3><span class="stage-num">Stage 2</span> Exploration &amp; collectibles</h3><span class="stage-meta"><span class="stage-difficulty" data-field="difficulty">Difficulty 4/10</span> · <span class="stage-hours" data-field="hours">35 hours</span> · <span class="stage-count" data-field="count">7 trophies</span> · <span class="stage-earned" data-field="earned">0 / 7 earned</span></span></header>
+        <p class="stage-guidance" data-field="guidance">Sweep Leonida region by region rather than criss-crossing the map: 18 meditation spots across 10 locations, 100 WAiNK It spots, 100 vehicles to drive, all 52 regions to visit, 3 full collectible card decks, 10 Scooter Bros deliveries, and 8 purchasable garages. Start the meditation sweep in Chapter 1 (see stage 1) and pick up spots as the story opens new regions. Note the one count clash in the sources: the trophy text says 8 garages, while PowerPyx's property database lists 12 — buy 8 and the trophy should pop; the extra 4 are spares, not requirements.</p>
+        <ol class="stage-trophies" data-field="trophies" aria-label="Trophies in this stage"></ol>
+      </article>
+      <article class="roadmap-stage" data-stage-id="3" data-focus="combat" data-trophy-ids="36,37,38,39,40,41,43">
+        <header class="stage-head"><h3><span class="stage-num">Stage 3</span> Combat &amp; crime</h3><span class="stage-meta"><span class="stage-difficulty" data-field="difficulty">Difficulty 3/10</span> · <span class="stage-hours" data-field="hours">12 hours</span> · <span class="stage-count" data-field="count">7 trophies</span> · <span class="stage-earned" data-field="earned">0 / 7 earned</span></span></header>
+        <p class="stage-guidance" data-field="guidance">The combat set is short and mostly free-roam: 5 kills with Combat Focus, an escape from the VCIA airport, a Rhino tank takedown, a clean jewelry-store robbery, 5 bank vaults cracked, one armored-truck blitz, and 9 gang operations cleared. Do the bank vaults and gang operations as they appear on the map between other stages — none of them is gated — and save the tank and airport escapes for a quiet moment with full health and a fast getaway car.</p>
+        <ol class="stage-trophies" data-field="trophies" aria-label="Trophies in this stage"></ol>
+      </article>
+      <article class="roadmap-stage" data-stage-id="4" data-focus="minigames/challenges" data-trophy-ids="15,16,17,18,19,20,21,32,46,47,48">
+        <header class="stage-head"><h3><span class="stage-num">Stage 4</span> Minigames, races &amp; challenges</h3><span class="stage-meta"><span class="stage-difficulty" data-field="difficulty">Difficulty 6/10</span> · <span class="stage-hours" data-field="hours">45 hours</span> · <span class="stage-count" data-field="count">11 trophies</span> · <span class="stage-earned" data-field="earned">0 / 11 earned</span></span></header>
+        <p class="stage-guidance" data-field="guidance">The hardest and longest stage — the platinum's real grind. Three big counts dominate it: 250 stunts out of 397 across Leonida, 42 shooting-range golds across 12 ranges, and 50 challenges out of 80. Around those: 14 Top Fun drone races, 20 race wins, 9 different activities for Master of None, the fishing challenge against Cal, the arcade high score, a bowling night, a personal best with your partner, and 500 tracked choices. Chip at stunts and challenges during every other stage instead of leaving all 250 stunts to the end; the shooting-range golds are the only genuinely skill-gated ask, so practice the ranges early and come back for gold once your aim is warm.</p>
+        <ol class="stage-trophies" data-field="trophies" aria-label="Trophies in this stage"></ol>
+      </article>
+      <article class="roadmap-stage" data-stage-id="5" data-focus="misc" data-trophy-ids="22,23,24,25,26,27,29,33,34,52,53">
+        <header class="stage-head"><h3><span class="stage-num">Stage 5</span> Side strands &amp; misc</h3><span class="stage-meta"><span class="stage-difficulty" data-field="difficulty">Difficulty 3/10</span> · <span class="stage-hours" data-field="hours">20 hours</span> · <span class="stage-count" data-field="count">11 trophies</span> · <span class="stage-earned" data-field="earned">0 / 11 earned</span></span></header>
+        <p class="stage-guidance" data-field="guidance">Finish the five side-character strands — Andy, Kenton, Billy, Randy and Tyrone — plus all 8 stranger missions and the hunt for Bret. These are chapter-gated, not missable, but finish each strand before advancing the story past its window. The misc half is money and partner time: 3 shopping trips with your partner, $100,000 spent in shops, and $250,000 in marked bills moved. Money comes naturally from the story and the stage-3 robberies; if you are short at the end, the repeatable robberies top it up.</p>
+        <ol class="stage-trophies" data-field="trophies" aria-label="Trophies in this stage"></ol>
+      </article>
+      <article class="roadmap-stage" data-stage-id="6" data-focus="cleanup" data-trophy-ids="14,44,45,49,50,51">
+        <header class="stage-head"><h3><span class="stage-num">Stage 6</span> Cleanup &amp; 100%</h3><span class="stage-meta"><span class="stage-difficulty" data-field="difficulty">Difficulty 5/10</span> · <span class="stage-hours" data-field="hours">28 hours</span> · <span class="stage-count" data-field="count">6 trophies</span> · <span class="stage-earned" data-field="earned">0 / 6 earned</span></span></header>
+        <p class="stage-guidance" data-field="guidance">The 100% completion checklist (A Long Road, gold) opens after the story — work through whatever it still lists, then check the tracker for anything left. The five mystery trophies live here because no source confirms their triggers: PowerPyx asserts methods for In The Beginning…, Capital Offense and The Truth Is Out There, which four other guides leave unconfirmed, while Bad Luck, I Guess and Ten Pin are unknown everywhere. Try the asserted methods, but do not grind blind — these five are the likeliest to get confirmed methods from the community after launch, so check the cited sources again before sinking hours into them.</p>
+        <ol class="stage-trophies" data-field="trophies" aria-label="Trophies in this stage"></ol>
+      </article>
+      <article class="roadmap-stage" data-stage-id="7" data-focus="platinum" data-trophy-ids="1">
+        <header class="stage-head"><h3><span class="stage-num">Stage 7</span> Platinum</h3><span class="stage-meta"><span class="stage-difficulty" data-field="difficulty">Difficulty 1/10</span> · <span class="stage-hours" data-field="hours">0 hours — pops automatically</span> · <span class="stage-count" data-field="count">1 trophy</span> · <span class="stage-earned" data-field="earned">0 / 1 earned</span></span></header>
+        <p class="stage-guidance" data-field="guidance">Vice Got a Price! pops automatically with the 54th trophy — there is nothing extra to do. If it does not pop, one trophy is still unearned: check the tracker, the 100% checklist, and the five mystery trophies in stage 6 first.</p>
+        <ol class="stage-trophies" data-field="trophies" aria-label="Trophies in this stage"></ol>
+      </article>
+    </div>
   </section>
 
   <section id="view-missable" class="view" hidden>
