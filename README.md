@@ -2,6 +2,8 @@
 [![rank](https://make.fun/badge/gta6-trophy-guide-01/musengbob/gta6-trophy-guide-01/rank.svg)](https://make.fun/c/gta6-trophy-guide-01)
 [![reward](https://make.fun/badge/gta6-trophy-guide-01/musengbob/gta6-trophy-guide-01/reward.svg)](https://make.fun/c/gta6-trophy-guide-01)
 
+Bounty page: [make.fun/bounty/gta6-trophy-guide-01](https://make.fun/bounty/gta6-trophy-guide-01)
+
 # Leonida Night — GTA 6 Trophy Guide & Tracker
 
 An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI, built for the [make.fun gta6-trophy-guide-01 bounty](https://make.fun/c/gta6-trophy-guide-01). Dark "Leonida night" look, zero network requests, works with the network off.
@@ -17,7 +19,7 @@ An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Au
 - **Platinum roadmap** — all 55 trophies in 7 stages in earning order (story, exploration & collectibles, combat & crime, minigames/races/challenges, side strands & misc, cleanup & 100%, platinum), each stage with its difficulty, hours and guidance; difficulty 4/10, about 200 hours, 1 playthrough; per-stage earned/total counters.
 - **Missable Watch** — the 1 confirmed missable (Chapter 1 balcony meditation) plus 17 chapter-gated story trophies, honestly flagged as chapter-gated, not missable.
 - **Next Up planner** — suggests the next 3 trophies from current progress: missable first, then chapter-gated, then the earliest unfinished stage.
-- **Backup pane** — visible in the main layout: export/import/reset buttons, the localStorage key (`leonida-night-earned-v1`) and the stored-bytes display, plus a share link that encodes progress in the URL (`?earned=…`). URL params also drive view, filter, spoiler and the open guide (`?view=&filter=&spoiler=&open=`).
+- **Backup pane** — visible in the main layout: export/import/reset buttons, the localStorage key (`leonida-night-earned-v1`) and the stored-bytes display, plus a share link that encodes progress in the URL (`?earned=…`). URL params also drive view, filter, confirmation and spoiler (`?view=&filter=&confirm=&spoiler=`).
 
 ## Run it
 

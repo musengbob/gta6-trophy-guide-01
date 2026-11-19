@@ -17,7 +17,7 @@
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 // Run it twice and compare: both runs must write the same bytes.
 
-import { cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier, canonicalJson } from './vendor/makefun-frontend.ts';
@@ -154,6 +154,19 @@ for (const s of roadmapFile.stages) {
   }
 }
 check(staged.size === 55, `roadmap stages cover ${staged.size} trophies, expected 55`);
+
+// Screenshots: exactly 4 image files, each at most 256 KiB (the gate's own
+// limits) — fail loudly rather than hand in a set the scorer would refuse.
+const shotDir = join(here, 'screenshots');
+check(existsSync(shotDir), 'screenshots/ directory is missing');
+const shotFiles = readdirSync(shotDir).filter((f) =>
+  statSync(join(shotDir, f)).isFile(),
+);
+check(shotFiles.length === 4, `expected exactly 4 screenshots, counted ${shotFiles.length}`);
+for (const f of shotFiles) {
+  const size = statSync(join(shotDir, f)).size;
+  check(size <= 262144, `screenshot ${f} is ${size} bytes, over the 256 KiB limit`);
+}
 
 mkdirSync(out, { recursive: true });
 cpSync(join(here, 'app'), join(out, 'app'), { recursive: true });
