@@ -2,41 +2,56 @@
 [![rank](https://make.fun/badge/gta6-trophy-guide-01/musengbob/gta6-trophy-guide-01/rank.svg)](https://make.fun/c/gta6-trophy-guide-01)
 [![reward](https://make.fun/badge/gta6-trophy-guide-01/musengbob/gta6-trophy-guide-01/reward.svg)](https://make.fun/c/gta6-trophy-guide-01)
 
-# Leonida Night — GTA 6 Trophy Guide & Tracker
+# Leonida Ledger — GTA 6 Trophy Guide & Tracker
 
-An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI, built for the [make.fun gta6-trophy-guide-01 bounty](https://make.fun/c/gta6-trophy-guide-01). Dark "Leonida night" look, zero network requests, works with the network off.
+An offline web app that is the best guide and tracker for the 55 PlayStation 5
+trophies of Grand Theft Auto VI. Static files that open in a desktop browser and
+work with the network off.
+
+Built for the [make.fun gta6-trophy-guide-01 bounty](https://make.fun/c/gta6-trophy-guide-01).
 
 ## What it does
 
-- **Tracker** — all 55 trophies with official names, descriptions and grades, checkboxes saved in localStorage, filters (All / Story / Missable / Collectibles / Activities / Online), text search, and a spoiler-safe setting that hides hidden trophies until earned.
-- **Evidence audit strip** — live counts computed from the data file: 55/55 names, descriptions, guides and citations, the 1/2/6/46 grade split, 28 hidden, sources read 20 Nov 2026.
-- **Source matrix** — every source used, with the date read and how many trophies cite it; every trophy's guide carries its own citation chip.
-- **PSN points** — live earned/total counter (platinum 180, gold 90, silver 30, bronze 15; 1,230 total).
-- **Platinum roadmap** — all 55 trophies in 6 stages in earning order, each row showing grade, chapter/mission/activity, count where PlayStation tracks one, and missable flag; per-stage earned/total counters.
-- **Missable Watch** — the 1 confirmed missable (Chapter 1 balcony meditation) plus 17 chapter-gated story trophies, honestly flagged as chapter-gated, not missable.
-- **Next Up planner** — suggests the next 3 trophies from current progress: missable first, then chapter-gated, then the earliest unfinished stage.
-- **Export / import** — progress exports to a JSON file and imports back; a share link encodes progress in the URL (`?earned=…`). URL params also drive view, filter, spoiler and the open guide (`?view=&filter=&spoiler=&open=`).
+- Every trophy with its official name, description and grade: 1 Platinum,
+  2 Gold, 6 Silver, 46 Bronze — 28 of them hidden until earned.
+- A checklist saved in the browser, with export and import, filters by kind,
+  and a spoiler setting that hides story trophies until they are earned.
+- A guide to each trophy in our own words that cites its sources: what to do,
+  where and how, and when it can be missed — restructured into numbered,
+  cited steps (153 steps across the 55 guides).
+- A 7-stage roadmap to the platinum: difficulty 4/10, about 200 hours,
+  1 playthrough.
+- Missable tracking: only Positive Mental Attitude (id 28) is flagged as
+  potentially missable, with the Chapter 1 meditation called out.
+- Honest uncertainty tracking: every trophy is marked confirmed, single-source
+  or unconfirmed, and guides spell out where sources disagree (10 trophies).
+
+## Sources
+
+Every guide cites its sources. The 7 sources, read 20 November 2026, are
+listed with per-source depth notes in `app/data/sources.json`:
+
+1. PowerPyx — GTA 6 Trophy Guide & Roadmap
+2. GTABase — GTA 6 Trophy Guide & Achievements List
+3. OutputLag — GTA 6 Trophy List
+4. SixShore — GTA 6 Trophy and Achievement List
+5. GTA Zone — GTA 6 Trophy List
+6. FullSweep — GTA 6 Trophy List
+7. PlanetGTA6 — GTA 6 Trophies
+
+## Data
+
+- `app/data/trophies.json` — the 55 trophies with guides, numbered cited
+  steps, confirmation status, disagreement flags, locations, counts,
+  missable and chapter-gate flags, and PSN points (1,230 total).
+- `app/data/sources.json` — the 7 cited sources with coverage notes.
+- `app/data/roadmap.json` — the 7-stage platinum roadmap.
 
 ## Run it
 
-```sh
-node serve.ts
-```
-
-then open http://localhost:8080. Any static server with `app/` at its root works.
-
-## Hand it in
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
-```
-
-`main.ts` copies `app/` and `screenshots/` to the output directory and writes `dossier.json` with the kit's vendored `buildDossier`.
-
-## Sources & honesty
-
-Trophy names, descriptions and grades are shown as PlayStation publishes them. Hidden status comes from the Planet GTA 6 visible/hidden split (27 visible, 28 hidden), cross-checked against the official count. Every guide is written in our own words from the official descriptions and the cited sources — nothing is copied from another guide. Where guide writers have not confirmed a trigger yet, the guide says so. No Rockstar logo, official artwork, box art or game screenshots anywhere in the app.
+Serve `app/` with any static file server and open `index.html` in a desktop
+browser. It works with the network off.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. No Rockstar logo or official artwork is used.
