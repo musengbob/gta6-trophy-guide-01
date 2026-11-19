@@ -33,7 +33,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Earn the other 54 trophies. The long pole is A Long Road (100% completion), so finish the story first, then work the stages in order; guide writers put the platinum at about 200 hours.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 2,
@@ -49,7 +52,10 @@
    "chapterGated": true,
    "gate": "Story window — the opening mission; it unlocks as the story starts.",
    "guide": "Finish the opening mission, Gone Fishing. It unlocks as the story starts, so it is the first trophy most players earn.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 3,
@@ -65,7 +71,10 @@
    "chapterGated": true,
    "gate": "Story window — earned by finishing Chapter 1; check the missable below first.",
    "guide": "Finish Chapter 1. Before the chapter ends, meditate at the Chapter 1 balcony spot for Positive Mental Attitude — that spot goes away with the chapter.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 4,
@@ -81,7 +90,10 @@
    "chapterGated": true,
    "gate": "Story window — earned by finishing Chapter 2.",
    "guide": "Finish Chapter 2. Story progress only — keep playing the main missions in order.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 5,
@@ -97,7 +109,10 @@
    "chapterGated": true,
    "gate": "Story window — earned by finishing Chapter 3.",
    "guide": "Finish Chapter 3. Story progress only — the chapter trophy pops when the last mission of the chapter ends.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 6,
@@ -113,7 +128,10 @@
    "chapterGated": true,
    "gate": "Story window — earned by finishing Chapter 4.",
    "guide": "Finish Chapter 4. Story progress only — the last chapter before the final mission.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 7,
@@ -129,7 +147,10 @@
    "chapterGated": true,
    "gate": "Story window — the final mission; the story runs about 60 hours.",
    "guide": "Finish the final mission. The story runs about 60 hours, so this gold is the last story trophy most players earn — and the moment the 100% checklist opens.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 8,
@@ -145,7 +166,10 @@
    "chapterGated": true,
    "gate": "Story window — tied to its mission; complete it when the story offers it.",
    "guide": "Finish the mission Breakfast Run when the story offers it. Story missions unlock in order, so you cannot skip ahead to it.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 9,
@@ -161,7 +185,10 @@
    "chapterGated": true,
    "gate": "Story window — tied to its mission; complete it when the story offers it.",
    "guide": "Finish the mission The Cartel Heist. It is a story heist, so it arrives in the mission order — play the story and it comes.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 10,
@@ -177,7 +204,10 @@
    "chapterGated": true,
    "gate": "Story window — tied to its mission; complete it when the story offers it.",
    "guide": "Finish the mission Child's Play when the story offers it.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 11,
@@ -193,7 +223,10 @@
    "chapterGated": true,
    "gate": "Story window — tied to its mission; complete it when the story offers it.",
    "guide": "Finish the mission Headliners when the story offers it.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 12,
@@ -209,7 +242,10 @@
    "chapterGated": true,
    "gate": "Story window — tied to its mission; complete it when the story offers it.",
    "guide": "Finish the mission VCIA Takedown when the story offers it. The airport is the setting — expect it mid-story, in mission order.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 13,
@@ -225,7 +261,10 @@
    "chapterGated": true,
    "gate": "Story window — tied to its mission; complete it when the story offers it.",
    "guide": "Finish the mission Operation Savage Glory when the story offers it.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 6
   },
   {
    "id": 14,
@@ -241,7 +280,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Reach 100% completion — the checklist opens after the story and covers the missions, strands, activities and collectibles across Leonida. It is the last trophy before the platinum for most players.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 15,
@@ -257,7 +299,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Complete 250 stunts. Stunts count across free roam — jumps, near misses and airtime all add up, so this finishes on its own if you drive hard between missions.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 16,
@@ -273,7 +318,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Try each type of activity once — all 9 activity types. Dip into one of each early so you know what the map offers, and this pops fast.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 17,
@@ -289,7 +337,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Earn a gold medal in all 42 Shooting Range challenges. Work through the ranges weapon by weapon; gold needs clean runs, so replay a challenge until the medal flips.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 18,
@@ -305,7 +356,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Win a Top Fun Drone Race at every location — all 14 of them. Learn each course's line before racing it for the win.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 19,
@@ -321,7 +375,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Win 20 different races. Each race counts once, so spread your wins across the map instead of replaying one favourite.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 20,
@@ -337,7 +394,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Beat Cal in a fishing challenge. Fishing challenges are head-to-head, so land the bigger catch before time runs out.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   }
 ,
   {
@@ -354,7 +414,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Complete an arcade game. Pick the shortest cabinet you find and play it through to the end.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 22,
@@ -370,7 +433,10 @@
    "chapterGated": true,
    "gate": "Side-strand window — finish Andy's strand before the endgame.",
    "guide": "Complete the final mission for Andy — the last job in his strand. Stranger strands unlock as you explore, so check the map for Andy's marker between story beats.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 23,
@@ -386,7 +452,10 @@
    "chapterGated": true,
    "gate": "Side-strand window — finish Kenton's strand before the endgame.",
    "guide": "Complete the final mission for Kenton — the last job in his strand.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 24,
@@ -402,7 +471,10 @@
    "chapterGated": true,
    "gate": "Side-strand window — finish Billy's strand before the endgame.",
    "guide": "Complete the final mission for Billy — the last job in his strand.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 25,
@@ -418,7 +490,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Complete 8 mission strands for strangers across Leonida. Strands are the side stories marked on the map — finish any 8 of them, and the character strands in this stage count toward it.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 26,
@@ -434,7 +509,10 @@
    "chapterGated": true,
    "gate": "Side-strand window — finish Randy's strand before the endgame.",
    "guide": "Complete the final mission for Randy — the last job in his strand.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 27,
@@ -450,7 +528,10 @@
    "chapterGated": true,
    "gate": "Side-strand window — finish Tyrone's strand before the endgame.",
    "guide": "Complete the final mission for Tyrone — the last job in his strand.",
-   "sources": ["psn", "p6"]
+   "sources": ["psn", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 28,
@@ -466,7 +547,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Meditate at every spot across Leonida — all 18 spots. MISSABLE: the Chapter 1 balcony spot disappears after Chapter 1 and there is no mission replay, so meditate there before you finish the chapter; the other 17 spots stay open.",
-   "sources": ["psn", "ss", "p6"]
+   "sources": ["psn", "ss", "p6"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 29,
@@ -482,7 +566,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Hunt a unique animal for Bret. Bret's hunt is a one-off target — track it, take the shot, and bring it back.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 30,
@@ -498,7 +585,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Complete 3 Collectible Card sets. Cards are scattered across Leonida; a finished set counts, so track down the missing cards set by set.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 31,
@@ -514,7 +604,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "WAiNK It at 100 locations. The WAiNK app marks spots as you use it — work through the map region by region so none are missed.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 32,
@@ -530,7 +623,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Complete 50 Challenges. Challenges are the open-world checklists — combat, driving and exploration feats that tick off as you play.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 33,
@@ -546,7 +642,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Lose a 4 star Wanted Level with your partner and escape the heat. Build the wanted level with your partner beside you, then break line of sight and stay hidden until it clears.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 34,
@@ -562,7 +661,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Rob 3 shops back-to-back with your partner without losing your Wanted Level. Hit three shops in one run and keep the heat on between them — do not let the wanted level drop.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 35,
@@ -578,7 +680,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Discover 100 vehicles. Every new vehicle you drive counts, so take a spin in anything unfamiliar you see parked or passing.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 36,
@@ -594,7 +699,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Take down 5 enemies in a single use of Combat Focus. Wait for a group, trigger Combat Focus, and drop five before it ends — a crowded firefight is the moment.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 37,
@@ -610,7 +718,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Make an unscheduled departure at VCIA. The airport is the scene — leave it in a way the schedule never planned, by air rather than by the front door.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 38,
@@ -626,7 +737,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Kinda hot in these Rhinos — Rhinos are tanks, and the joke description points at taking one on. Deal with a Rhino on your own terms and the trophy pops.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 39,
@@ -642,7 +756,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Rob a jewelry store without being detected. Go in quiet, stay out of sight lines, and leave before anyone raises the alarm.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 40,
@@ -658,7 +775,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Rob 5 Bank Vaults and escape. Vault jobs are the big robberies — plan the getaway before you crack the vault, five times over.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   }
 ,
   {
@@ -675,7 +795,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Rob an Armored Truck and escape. Hit the truck, grab the cash, and lose the heat before it catches up.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 42,
@@ -691,7 +814,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Explore all of Leonida — all 52 areas. The map fills in as you travel, so drive every road and visit every corner of the state.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 43,
@@ -707,7 +833,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Rob an Illegal Operation belonging to each gang — all 9 gangs. One operation per gang counts, so spread the jobs across the map.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 44,
@@ -723,7 +852,11 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Enjoy a cocktail with a view on Ocean Beach. Head to the beachfront, order the drink, and take in the view.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "unconfirmed",
+   "disagree": true,
+   "source_count": 7,
+   "confirm_note": "Name, grade and description confirmed by 7 sources; unlock method disputed - PowerPyx gives a specific bar-and-drink method, while four other guides say the exact steps are not confirmed yet."
   },
   {
    "id": 45,
@@ -739,7 +872,11 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Smash your way out of a vehicle showroom in classic style. The showroom is the set piece — drive out through it, not around it.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "unconfirmed",
+   "disagree": true,
+   "source_count": 7,
+   "confirm_note": "Name, grade and description confirmed by 7 sources; unlock method disputed - PowerPyx gives a specific showroom-car method, while four other guides say the exact steps are not confirmed yet."
   },
   {
    "id": 46,
@@ -755,7 +892,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Follow-through at the Kolt & Associates' bowling alley. Play a full game at the alley and see it through to the end.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 47,
@@ -771,7 +911,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "A partnership with mass appeal. The description is a joke line and guide writers have not pinned the exact trigger down yet — it reads as a partner moment, so play the duo content and watch for it.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 48,
@@ -787,7 +930,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Choices made (for better or worse). PlayStation tracks a count to 500 — decisions across the game add up, so keep choosing and this lands late in a long playthrough.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 49,
@@ -803,7 +949,11 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Second time's the charm. The trigger is not yet pinned down by guide writers — the name points to succeeding on a second attempt at something that first went wrong.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "unconfirmed",
+   "disagree": false,
+   "source_count": 7,
+   "confirm_note": "Name, grade and description confirmed by 7 sources; no source confirms the unlock trigger - PowerPyx calls it currently unknown and only guesses a link to a payday-loans store."
   },
   {
    "id": 50,
@@ -819,7 +969,11 @@
    "chapterGated": false,
    "gate": null,
    "guide": "What the hell just happened? A secret or easter-egg moment — guide writers have not confirmed the exact trigger yet, so explore the strange corners of Leonida.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "unconfirmed",
+   "disagree": true,
+   "source_count": 7,
+   "confirm_note": "Name, grade and description confirmed by 7 sources; unlock method disputed - PowerPyx gives a specific UFO-easter-egg method, while four other guides say the exact steps are not confirmed yet."
   },
   {
    "id": 51,
@@ -835,7 +989,11 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Bowl 'em over with a melee drive-by. Swing a melee weapon from a moving vehicle and knock someone down with it.",
-   "sources": ["psn", "ss"]
+   "sources": ["psn", "ss"],
+   "confirm_status": "unconfirmed",
+   "disagree": false,
+   "source_count": 7,
+   "confirm_note": "Name, grade and description confirmed by 7 sources; no source confirms the unlock trigger - PowerPyx calls it currently unknown and only guesses a kick from a motorcycle."
   },
   {
    "id": 52,
@@ -851,7 +1009,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Earn $250,000 laundering Marked Bills through your contacts. Marked bills come from jobs — run them through your contacts until the total hits $250,000.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 53,
@@ -867,7 +1028,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Spend $100,000 across all shops. Every shop purchase counts toward the total, so spend steadily instead of saving it all.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   },
   {
    "id": 54,
@@ -883,7 +1047,11 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Purchase all garage properties — all 8 of them. Buy every garage on the market; they also give you somewhere to keep the 100 vehicles.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "unconfirmed",
+   "disagree": true,
+   "source_count": 7,
+   "confirm_note": "Name, grade and description confirmed by 7 sources; garage count disputed - the trophy text says 8 purchasable garages, PowerPyx's database lists 12 locations."
   },
   {
    "id": 55,
@@ -899,7 +1067,10 @@
    "chapterGated": false,
    "gate": null,
    "guide": "Register 10 vehicles to the Scooter Bros app. Open the app, register a vehicle, and repeat until 10 are on the books.",
-   "sources": ["psn", "pp"]
+   "sources": ["psn", "pp"],
+   "confirm_status": "confirmed",
+   "disagree": false,
+   "source_count": 7
   }
  ]
 }
