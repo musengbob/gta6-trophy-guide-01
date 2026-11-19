@@ -1,16 +1,16 @@
-// Leonida Night — gta6-trophy-guide-01 round 2 entrypoint (Node 22, stdlib only).
+// Leonida Atlas — the gta6-trophy-guide-01 round-3 hand-in (Node 22, standard library only).
 //
-// The guide itself is app/ (plain static files: index.html, style.css, app.js,
-// data/trophies.json), served with app/ at the server root, fully offline.
-// screenshots/ holds the 4 screenshots Phase B takes of the running app.
-// This program hands both in: it copies app/ and screenshots/ to the output
-// directory and writes /output/dossier.json with the kit's vendored library
-// (vendor/makefun-frontend.ts, unchanged — the scorer rebuilds the dossier
-// with its own copy and compares byte for byte).
+// The guide itself is the static files under app/ (index.html, style.css, app.js and
+// app/data/trophies.json): an offline trophy guide and tracker that loads nothing over the
+// network. This program hands it in: it copies app/ and screenshots/ from beside this file
+// into the output directory and writes output/dossier.json with the vendored make.fun
+// library, which is the summary the judge reads. vendor/makefun-frontend.ts is the kit's
+// own file and is left exactly as it is — the scorer requires the dossier to be byte for
+// byte what its own copy of the library writes.
 //
-// Outside the grader, MAKEFUN_OUTPUT_DIR stands in for /output:
+// Run it outside the grader with MAKEFUN_OUTPUT_DIR standing in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
-// Run it twice and compare: both runs must write the same bytes.
+// Run it twice: the dossier must come out byte-identical both times.
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -27,9 +27,10 @@ if (existsSync(join(here, 'screenshots'))) {
   cpSync(join(here, 'screenshots'), join(out, 'screenshots'), { recursive: true });
 }
 
-// The scorer's own caps: only text_max_bytes shapes the bytes; the rest refuse
-// an entry the scorer would refuse (more than 4 screenshots or one over
-// 256 KiB; more than 993 files and directories in app/ or 48 MiB of app files).
+// The scorer's own caps (reference/gate.json): at most 4 screenshots, each at most 256 KiB;
+// at most 993 files and directories in app/, at most 48 MiB of app files. text_max_bytes
+// is the only cap that shapes the dossier's bytes; the others refuse an entry the scorer
+// would refuse.
 writeFileSync(
   join(out, 'dossier.json'),
   buildDossier(out, {

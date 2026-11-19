@@ -3,92 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leonida Night — GTA 6 Trophy Guide &amp; Tracker</title>
-<meta name="description" content="Offline guide and tracker for all 55 GTA 6 PlayStation trophies: cited guides, platinum roadmap, missable watch, saved progress.">
+<title>Leonida Atlas — GTA 6 Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="brand">
-    <div class="brand-mark" aria-hidden="true">LN</div>
+<header class="hero">
+  <div class="hero-top">
     <div>
-      <h1>LEONIDA NIGHT</h1>
-      <p class="tagline">GTA 6 Trophy Guide &amp; Tracker — all 55 PlayStation trophies, fully offline</p>
+      <p class="kicker">GRAND THEFT AUTO VI &middot; PLAYSTATION 5 &middot; OFFLINE GUIDE &amp; TRACKER</p>
+      <h1>Leonida Atlas</h1>
+      <p class="sub">Every one of the 55 trophies, in your own words from seven real guides — with numbered cited steps, a 7-stage roadmap, uncertainty tracking and a checklist that saves in your browser. No network needed: this page works with the network off.</p>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-big" id="hero-earned">0 / 55</div>
+      <div class="hero-badge-sub">trophies earned</div>
+      <div class="hero-badge-pts" id="hero-points">0 / 1,230 PSN pts</div>
     </div>
   </div>
-  <div class="header-stats">
-    <div class="stat" id="points-stat"><span class="stat-label">PSN points</span><span class="stat-value" id="points-value">0 / 1,230</span></div>
-    <div class="stat" id="progress-stat"><span class="stat-label">Earned</span><span class="stat-value" id="progress-value">0 / 55</span></div>
-    <div class="progress-bar" role="progressbar" aria-label="Trophies earned"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="audit" id="audit" aria-label="Guide audit"></div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-label" id="progress-label"></div>
   </div>
 </header>
 
-<section class="audit-strip" id="audit-strip" aria-label="Evidence audit">
-  <span class="audit-title">AUDIT</span>
-  <span id="audit-text">Loading audit…</span>
-</section>
-
-<nav class="views" aria-label="Guide sections">
-  <button class="view-tab" data-view="tracker" type="button">Tracker</button>
-  <button class="view-tab" data-view="roadmap" type="button">Platinum Roadmap</button>
-  <button class="view-tab" data-view="missable" type="button">Missable Watch</button>
-  <button class="view-tab" data-view="sources" type="button">Source Matrix</button>
-</nav>
-
-<section class="nextup" id="nextup" aria-label="Next up planner">
-  <h2>NEXT UP — your next 3 trophies</h2>
-  <ol id="nextup-list"></ol>
-</section>
-
-<section class="stage-strip" id="stage-strip" aria-label="Stage tracker"></section>
-
 <main>
-  <section id="view-tracker" class="view">
-    <div class="toolbar">
-      <div class="filters" role="group" aria-label="Filter trophies">
-        <button class="filter-btn" data-filter="all" type="button">All</button>
-        <button class="filter-btn" data-filter="story" type="button">Story</button>
-        <button class="filter-btn" data-filter="missable" type="button">Missable</button>
-        <button class="filter-btn" data-filter="collectibles" type="button">Collectibles</button>
-        <button class="filter-btn" data-filter="activities" type="button">Activities</button>
-        <button class="filter-btn" data-filter="online" type="button">Online</button>
-      </div>
-      <input id="search" type="search" placeholder="Search name, mission or place…" aria-label="Search trophies">
-      <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> Spoiler-safe: hide hidden trophies until earned</label>
-    </div>
-    <div class="toolbar tools">
-      <button id="export-btn" type="button">Export progress</button>
-      <button id="import-btn" type="button">Import progress</button>
-      <button id="copy-link-btn" type="button">Copy share link</button>
-      <button id="reset-btn" type="button">Reset progress</button>
-      <input id="import-file" type="file" accept="application/json,.json" hidden>
-      <span id="tool-msg" role="status"></span>
-    </div>
-    <p class="result-count" id="result-count"></p>
-    <div class="cards" id="cards"></div>
-  </section>
-
-  <section id="view-roadmap" class="view" hidden>
-    <h2>Platinum Roadmap — all 55 trophies, in earning order</h2>
-    <p class="view-intro">Six stages, in the order to earn them. The story runs about 60 hours; the platinum takes about 200. Cheats disable trophies, so keep them off until the platinum pops. Every row shows the trophy's grade, its chapter, mission or activity, its count where PlayStation tracks one, and its missable flag.</p>
-    <div id="roadmap"></div>
-  </section>
-
-  <section id="view-missable" class="view" hidden>
+  <section class="panel warn" id="missable">
     <h2>Missable Watch</h2>
-    <p class="view-intro">One trophy is confirmed missable. The chapter-gated list below is NOT a missable list: those trophies unlock from story progress, and they are here so you check them off before advancing, in case a later chapter locks earlier content. Guide sites still call the wider missable list unconfirmed — keep manual saves before big missions.</p>
-    <div id="missable"></div>
+    <p class="panel-note">Only one trophy can be missed — and only possibly. Everything else stays open after the story. The chapter-gated trophies below need a story unlock first; none of them is missable.</p>
+    <div id="missable-body"></div>
   </section>
 
-  <section id="view-sources" class="view" hidden>
-    <h2>Source Matrix — every source, counted from the data</h2>
-    <p class="view-intro">Every guide in this app cites its sources by name, with the date read. No guide text is copied from any of them: each guide is written in our own words from the official descriptions, and the citation shows where each fact comes from. Counts below are computed live from the trophy data.</p>
-    <div id="source-matrix"></div>
+  <section class="panel" id="nextup">
+    <h2>Next Up — your planner</h2>
+    <p class="panel-note">Missable first, then roadmap order. Tick trophies off in the checklist and this updates.</p>
+    <ol class="nextup-list" id="nextup-list"></ol>
+  </section>
+
+  <section class="controls" id="controls">
+    <div class="filters" id="filters" role="group" aria-label="Filter trophies"></div>
+    <div class="controls-row">
+      <input type="search" id="search" placeholder="Search name or description…" aria-label="Search trophies">
+      <label class="spoiler-toggle"><input type="checkbox" id="spoiler" checked> <span>Hide story spoilers</span></label>
+      <span class="count" id="shown-count"></span>
+    </div>
+  </section>
+
+  <section id="list" aria-label="Trophy checklist"></section>
+
+  <section class="panel" id="roadmap">
+    <h2>Roadmap to the Platinum — 7 stages</h2>
+    <p class="panel-note" id="roadmap-note"></p>
+    <div class="stages" id="stages"></div>
+  </section>
+
+  <section class="panel" id="sources">
+    <h2>Source Matrix — 7 guides read 20 Nov 2026</h2>
+    <p class="panel-note">Every guide below was read in full and cross-checked trophy by trophy. Coverage counts are counted from the cited steps in this guide — never typed in.</p>
+    <div class="table-wrap">
+      <table class="matrix" id="matrix">
+        <thead><tr><th>#</th><th>Source</th><th>Page</th><th>Read</th><th>Trophies cited</th><th>Depth</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <h3>How this guide was built</h3>
+    <p id="method"></p>
+  </section>
+
+  <section class="panel" id="uncertainty">
+    <h2>Unconfirmed &amp; disagreements</h2>
+    <p class="panel-note">Honest counts, computed from the data. A trophy is <b>confirmed</b> when two or more sources agree on its method, <b>single-source</b> when only one source gives a concrete method, and <b>unconfirmed</b> when no source confirms a method. <b>Disagree</b> means the sources conflict — the note says how.</p>
+    <div class="unc-counts" id="unc-counts"></div>
+    <div id="unc-list"></div>
+  </section>
+
+  <section class="panel" id="backup">
+    <h2>Your saved state — backup</h2>
+    <p class="panel-note">Progress lives only in this browser (localStorage). Nothing leaves your machine. Export a copy before you clear browser data.</p>
+    <div class="backup-grid">
+      <div><span class="lbl">Storage key</span><code id="bk-key"></code></div>
+      <div><span class="lbl">Bytes used</span><code id="bk-bytes"></code></div>
+      <div><span class="lbl">Trophies ticked</span><code id="bk-ticked"></code></div>
+    </div>
+    <div class="backup-btns">
+      <button type="button" id="btn-export">Export progress (.json)</button>
+      <label class="btn-file">Import progress<input type="file" id="file-import" accept=".json,application/json" hidden></label>
+      <button type="button" id="btn-reset" class="danger">Reset progress</button>
+    </div>
+    <p class="backup-status" id="backup-status"></p>
   </section>
 </main>
 
 <footer>
-  <p>Leonida Night is an unofficial fan guide. Grand Theft Auto, GTA and Rockstar Games belong to their owners; this guide shows no Rockstar logo, artwork, box art or game screenshots. Trophy names and descriptions are shown as PlayStation publishes them; every guide is written in our own words. Works fully offline — no network requests, progress saved in your browser only.</p>
+  <p>Leonida Atlas is an unofficial fan guide. Trophy names and descriptions are shown as PlayStation publishes them; every guide step is written fresh, in our own words, from the sources above. No Rockstar artwork, no logo, no network requests — the whole guide is static files.</p>
 </footer>
 
 <script src="app.js"></script>
