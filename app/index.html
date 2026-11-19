@@ -1,25 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Ledger — GTA 6 Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="top">
+  <div class="brand">
+    <h1>Leonida Ledger</h1>
+    <p class="tag">The complete offline guide &amp; tracker for all 55 GTA 6 trophies on PlayStation 5 — 1 platinum, 2 gold, 6 silver, 46 bronze. No online trophies. One trophy is missable.</p>
+  </div>
+  <div class="progress" id="progressBox" aria-live="polite">
+    <div class="progress-num"><strong id="earnedCount">0</strong><span> / 55 earned</span></div>
+    <div class="bar"><div class="bar-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="progress-sub" id="progressSub">0% to the platinum</div>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+<nav class="views" aria-label="Views">
+  <button class="view-btn" id="viewListBtn" data-view="list" type="button">Checklist</button>
+  <button class="view-btn" id="viewRoadmapBtn" data-view="roadmap" type="button">Roadmap to Platinum</button>
+  <span class="spacer"></span>
+  <label class="spoiler"><input type="checkbox" id="spoilerToggle"> Hide story spoilers</label>
+  <button id="exportBtn" type="button">Export progress</button>
+  <button id="importBtn" type="button">Import progress</button>
+  <input type="file" id="importFile" accept=".json,application/json" hidden>
+</nav>
+<section class="controls" aria-label="Filters">
+  <div class="filters" id="filterBar" role="group" aria-label="Filter trophies">
+    <button class="filter-btn" data-filter="all" type="button">All · 55</button>
+    <button class="filter-btn" data-filter="story" type="button">Story · 17</button>
+    <button class="filter-btn" data-filter="missable" type="button">Missable · 1</button>
+    <button class="filter-btn" data-filter="collectibles" type="button">Collectibles · 6</button>
+    <button class="filter-btn" data-filter="activities" type="button">Activities · 30</button>
+    <button class="filter-btn" data-filter="online" type="button">Online · 0</button>
+  </div>
+  <input type="search" id="searchBox" placeholder="Search a trophy by name…" aria-label="Search trophies">
+</section>
+<main>
+  <section id="listView" aria-label="Trophy checklist">
+    <p class="hint" id="listHint">Tick a trophy when you earn it — progress is saved in this browser. Click any card to open its guide and sources beside the list.</p>
+    <div class="layout">
+      <div class="grid" id="trophyGrid"></div>
+      <aside class="detail" id="detailPane" aria-live="polite"></aside>
+    </div>
+  </section>
+  <section id="roadmapView" hidden aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the Platinum</h2>
+    <p class="hint">One playthrough, about 200 hours. No mission replay and no New Game Plus, so keep a manual save at the start of every chapter (15 manual slots). Do the stages in order; every missable risk is flagged in Stage 1.</p>
+    <ol class="roadmap" id="roadmapList"></ol>
+    <h2>Missable Trophies</h2>
+    <p class="hint">Only one trophy can be missed. Everything else can be earned in free roam after the story.</p>
+    <div id="missableList"></div>
+  </section>
+</main>
+<footer>
+  <p>Sources: the official trophy list as published by Exophase and PSNProfiles (they agree on every name, description and grade); the missable warning and the no-mission-replay note from Output Lag and PowerPyx. Every guide on this page is written for this entry, in our own words, and names its source beside it. This guide is not affiliated with Rockstar Games.</p>
+  <p>Tip for screenshots: add <code>?view=roadmap</code> for the roadmap, <code>?filter=missable</code> for the missable flag, <code>?spoiler=1</code> to hide story names, <code>?open=28</code> to open a guide, <code>?earned=1,2,3</code> to seed earned trophies.</p>
+</footer>
 <script type="module" src="app.js"></script>
 </body>
 </html>
